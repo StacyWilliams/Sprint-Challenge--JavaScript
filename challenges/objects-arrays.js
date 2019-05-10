@@ -12,6 +12,7 @@ const tRex = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous'
+  
 };
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
  const  steggy = {
@@ -41,15 +42,15 @@ console.log(vRaptor.diet);
 console.log(steggy.weight);
 
 // What time period did tyrannosaurus live in?
-console.log(tRex.period);
+console.log(tRex.period)
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-   tRex.prototype.speak = function roar() {
+ this.speak = function roar() {
   return "RAWERSRARARWERSARARARRRR!";
- };
+}
 
- console.log tRex.speak()
+ console.log(this.speak())
 
 
 // ==== Arrays ====
@@ -71,7 +72,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 let universities = graduates.map( graduate => {
   return graduate.university
 })
- console.log(universities);
+ console.log(universities)
 
 
 
@@ -83,20 +84,20 @@ let universities = graduates.map( graduate => {
 let contactInfo = graduates.map(graduate => {
   return graduate.first_name, graduate.email
 }
-);
+)
 
 // The resulting contact information should have a space between the first name and the email information like this: 
 // Name email@example.com
 
 // Log the result of your new array. 
 
-console.log(contactInfo);
+console.log(contactInfo)
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
 let uni = graduates.includes("University", 1);
-console.log(uni);
+console.log(uni)
 
 
 // ==== ADVANCED Array Methods ====
@@ -120,8 +121,8 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = zooAnimals.map(zooAnimal => {
-  return zooAnimals.animalName , zooAnimals.scientific_name
+let animalNames = zooAnimals.map( zooAnimal => {
+  return zooAnimal.animal_name , zooAnimal.scientific_name
 });
 
 console.log(animalNames())
@@ -153,7 +154,7 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals
   .map( v => v[1] )                                
   .reduce( (populationTotal, current) => populationTotal + current, 0 );
   
