@@ -45,11 +45,11 @@ console.log(tRex.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-//  tRex.prototype.speak = function roar () {
-//   return ("RAWERSRARARWERSARARARRRR!");
-//  }
+   tRex.prototype.speak = function roar() {
+  return "RAWERSRARARWERSARARARRRR!";
+ };
 
-// console.log(tRex.speak());
+ console.log tRex.speak();
 
 
 // ==== Arrays ====
@@ -78,13 +78,17 @@ let universities = graduates.map( graduate => {
 
 
 
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
+//Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
-The resulting contact information should have a space between the first name and the email information like this: 
-Name email@example.com
+let contactInfo = graduates.map(graduate => {
+  return (graduate.first_name, graduate.email)
+})
 
-Log the result of your new array. */
-const contactInfo = [];
+// The resulting contact information should have a space between the first name and the email information like this: 
+// Name email@example.com
+
+// Log the result of your new array. 
+
 console.log(contactInfo);
 
 
@@ -115,14 +119,14 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-return [[zooAnimals.name] + [zooAnimals.scientific_name]];
-console.log(animalNames);
+console.log([zooAnimals.name] , [zooAnimals.scientific_name]);
 
-/* Request 2: .map()    
 
-The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+//  Request 2: .map()    
 
-*/
+// The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+
+
 
 const lowerCase = [];
 console.log(lowerCase); 
