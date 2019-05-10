@@ -67,15 +67,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
 // Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
-var newArray = [];
-function filergetElementById(university) {
-  return newArray >= graduates.getElementById("university");
-}
-    
+let universities ={graduates.university}
+ console.log(graduates.university)
 
-// Once you have the new array created, sort the universities alphabetically and log the result. 
-const universities = [];
-console.log(universities)
+
+
+
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
