@@ -71,7 +71,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 let universities = graduates.map( graduate => {
   return graduate.university
 })
- console.log(universities)
+ console.log(universities);
 
 
 
@@ -81,8 +81,9 @@ let universities = graduates.map( graduate => {
 //Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 let contactInfo = graduates.map(graduate => {
-  return (graduate.first_name, graduate.email)
-})
+  return graduate.first_name, graduate.email
+}
+)
 
 // The resulting contact information should have a space between the first name and the email information like this: 
 // Name email@example.com
@@ -93,7 +94,8 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+
+var uni = graduates.includes("University", 1);
 console.log(uni);
 
 
@@ -118,9 +120,11 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
-console.log([zooAnimals.name] , [zooAnimals.scientific_name]);
+const animalNames = zooAnimals.map(zooAnimals => {
+  return zooAnimal.animalName , zooAnimal.scientific_name
+});
 
+console.log(animalNames())
 
 //  Request 2: .map()    
 
@@ -128,7 +132,10 @@ console.log([zooAnimals.name] , [zooAnimals.scientific_name]);
 
 
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map(zooAnimals => {
+  return lowerCase.toLowerCase() === 'i';
+});
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -136,7 +143,9 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const largerPopulation = zooAnimals.map(zooAnimals => {
+  return largerPopulation > 5;
+})
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
