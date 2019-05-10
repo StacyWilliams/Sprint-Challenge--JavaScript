@@ -45,10 +45,11 @@ console.log(tRex.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
- tRex.speak = function roar () {
-  return console.log("RAWERSRARARWERSARARARRRR!");
- }
-console.log(tRex.speak);
+//  tRex.prototype.speak = function roar () {
+//   return ("RAWERSRARARWERSARARARRRR!");
+//  }
+
+// console.log(tRex.speak());
 
 
 // ==== Arrays ====
@@ -67,8 +68,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
 // Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
-let universities ={graduates.university}
- console.log(graduates.university)
+let universities = graduates.map( graduate => {
+  return graduate.university
+})
+ console.log(universities)
 
 
 
@@ -112,6 +115,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+return [[zooAnimals.name] + [zooAnimals.scientific_name]];
 console.log(animalNames);
 
 /* Request 2: .map()    
