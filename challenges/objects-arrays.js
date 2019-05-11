@@ -47,10 +47,10 @@ console.log(tRex.period)
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
  this.speak = function roar() {
-  return "RAWERSRARARWERSARARARRRR!";
+  return "RAWERSRARARWERSARARARRRR!"
 }
 
- console.log(this.speak())
+ console.log(this.speak());
 
 
 // ==== Arrays ====
@@ -125,7 +125,7 @@ let animalNames = zooAnimals.map( zooAnimal => {
   return zooAnimal.animal_name , zooAnimal.scientific_name
 });
 
-console.log(animalNames())
+console.log(animalNames)
 
 //  Request 2: .map()    
 
@@ -134,8 +134,8 @@ console.log(animalNames())
 
 
 const lowerCase = zooAnimals.map(zooAnimals => {
-  return zooAnimals.toLowerCase() === 'i';
-});
+  return zooAnimals
+})
 
 console.log(lowerCase); 
 
@@ -144,8 +144,8 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = zooAnimals.map(zooAnimals => {
-  return largerPopulation > 5;
+const largerPopulation = zooAnimals.filter(zooAnimal => {
+  return  zooAnimal.population > 5
 })
 console.log(largerPopulation);
 
@@ -155,8 +155,8 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = zooAnimals
-  .map( v => v[1] )                                
-  .reduce( (populationTotal, current) => populationTotal + current, 0 );
+                                  
+  .reduce( (populationTotal, current) => populationTotal + current.population, 0 );
   
 console.log(populationTotal);
 
